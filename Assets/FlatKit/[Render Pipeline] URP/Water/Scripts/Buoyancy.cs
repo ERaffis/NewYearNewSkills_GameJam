@@ -48,7 +48,8 @@ public class Buoyancy : MonoBehaviour {
 
         transform.position = positionWS;
         var normal = GetNormalWS(positionOS);
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, normal) * _originalRotation;
+        //transform.rotation = Quaternion.FromToRotation(Vector3.up, normal) * _originalRotation;
+        
     }
 
     Vector2 GradientNoiseDir(Vector2 p) {
