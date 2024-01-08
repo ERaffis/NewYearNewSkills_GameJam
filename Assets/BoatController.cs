@@ -40,6 +40,11 @@ public class BoatController : MonoBehaviour
 
     private void Update()
     {
+        PowerBoatOnOff();
+        ChangeBothInput();
+        ChangeLeftInput();
+        ChangeRightInput();
+            
         if (isBoatPowered)
         {
             CalculateSpeed();
@@ -63,6 +68,24 @@ public class BoatController : MonoBehaviour
         rightWheelModel.transform.Rotate(Vector3.down, rwRotationSpeed, Space.Self);
     }
 
+
+    private void PowerBoatOnOff()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isBoatPowered = !isBoatPowered;
+            if (isBoatPowered)
+            {
+                goButtonUI.goButton.image.sprite = goButtonUI.goSpriteOn;
+                stopButtonUI.stopButton.image.sprite = stopButtonUI.stopSpriteOff;
+            }
+            else
+            {
+                goButtonUI.goButton.image.sprite = goButtonUI.goSpriteOff;
+                stopButtonUI.stopButton.image.sprite = stopButtonUI.stopSpriteOn;
+            }
+        }
+    }
     private void PowerBoatOn(object sender, EventArgs e)
     {
         isBoatPowered = true;
@@ -80,12 +103,92 @@ public class BoatController : MonoBehaviour
         Debug.Log(e.sliderValue);
         leftWheelSpeed = e.sliderValue;
     }
+    private void ChangeLeftInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            leftWheelSpeed++;
+            if (leftWheelSpeed > 2)
+            {
+                leftWheelSpeed = 2;
+            }
+
+            leftWheelUI.slider.value = leftWheelSpeed;
+        }
+        else if(Input.GetKeyDown(KeyCode.A))
+        {
+            leftWheelSpeed--;
+            if (leftWheelSpeed < -2)
+            {
+                leftWheelSpeed = -2;
+            }
+            leftWheelUI.slider.value = leftWheelSpeed;
+        }
+    }
     
     private void ChangeRightInput(object sender, ShipUiControls.OnWheelChangeEventArgs e)
     {
         Debug.Log(e.sliderValue);
         rightWheelSpeed = e.sliderValue;
     }
+    
+    private void ChangeRightInput()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            rightWheelSpeed++;
+            if (rightWheelSpeed > 2)
+            {
+                rightWheelSpeed = 2;
+            }
+            rightWheelUI.slider.value = rightWheelSpeed;
+        }
+        else if(Input.GetKeyDown(KeyCode.D))
+        {
+            rightWheelSpeed--;
+            if (rightWheelSpeed < -2)
+            {
+                rightWheelSpeed = -2;
+            }
+            rightWheelUI.slider.value = rightWheelSpeed;
+        }
+    }
+    
+    private void ChangeBothInput()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            rightWheelSpeed++;
+            leftWheelSpeed++;
+            if (rightWheelSpeed > 2)
+            {
+                rightWheelSpeed = 2;
+            }
+            if (leftWheelSpeed > 2)
+            {
+                leftWheelSpeed = 2;
+            }
+            leftWheelUI.slider.value = leftWheelSpeed;
+            rightWheelUI.slider.value = rightWheelSpeed;
+        }
+        else if(Input.GetKeyDown(KeyCode.S))
+        {
+            rightWheelSpeed--;
+            leftWheelSpeed--;
+            if (rightWheelSpeed < -2)
+            {
+                rightWheelSpeed = -2;
+            }
+            if (leftWheelSpeed < -2)
+            {
+                leftWheelSpeed = -2;
+            }
+            leftWheelUI.slider.value = leftWheelSpeed;
+            rightWheelUI.slider.value = rightWheelSpeed;
+        }
+    }
+    
+    
     private void CalculateSpeed() //Takes the input of both wheel and creates a Vector2 where X is the leftWheel and Y is the rightWheel
     {
         _desiredBoatSpeed = (rightWheelSpeed + leftWheelSpeed) * speedModifier / 60f;
