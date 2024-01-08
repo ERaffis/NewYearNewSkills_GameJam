@@ -1,0 +1,166 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "Boat Controls",
+            "id": "35da14c4-cc2d-48fb-9fd1-e0abc035ab92",
+            "actions": [
+                {
+                    "name": "Left Wheel",
+                    "type": "Button",
+                    "id": "c4322b70-bade-4e29-9fcd-4be44481436c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right Wheel",
+                    "type": "Button",
+                    "id": "e70eb46a-eef5-447a-a17c-9b41ebf6ad0a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Both Wheel",
+                    "type": "Button",
+                    "id": "1ed0ca85-9da3-41a5-aa18-59e4629254b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Power",
+                    "type": "Button",
+                    "id": "d4027115-e151-43b4-b921-f7c0691490fd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "162d4f44-5315-4066-99a5-c4ae8af05ea0",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Wheel",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "dae0c6da-4d7a-48e5-80bd-4045e3e52860",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BoatControls",
+                    "action": "Left Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c7873064-0cdf-4a4a-99a1-f67a5efb99e7",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BoatControls",
+                    "action": "Left Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "b677d001-0858-4760-84ff-b5865cd56721",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Wheel",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "bb46e9ea-0a05-4e64-8725-618501a47664",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BoatControls",
+                    "action": "Right Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c42e2719-4812-4a4b-a819-14503e1f0046",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BoatControls",
+                    "action": "Right Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "31e42db6-65bc-4b03-827d-247505291ef4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BoatControls",
+                    "action": "Power",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "fc69a000-543b-450f-8765-65482392aa19",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Both Wheel",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "aa56bd6f-b272-4e77-aa66-08247322fb49",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BoatControls",
+                    "action": "Both Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "84b191c6-7444-4a19-addc-12b53fd9a3a7",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BoatControls",
+                    "action": "Both Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "BoatControls",
+            "bindingGroup": "BoatControls",
+            "devices": []
+        }
+    ]
+}
