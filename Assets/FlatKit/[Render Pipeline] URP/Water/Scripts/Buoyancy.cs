@@ -40,16 +40,16 @@ public class Buoyancy : MonoBehaviour {
         _originalRotation = t.rotation;
     }
 
-    private void Update() {
+    private void LateUpdate() {
         var positionWS = transform.position;
         var positionOS = water.InverseTransformPoint(positionWS);
 
         positionWS.y = GetHeightOS(positionOS) + _originalPosition.y;
 
-        transform.position = positionWS;
+        transform.position = new Vector3(positionWS.x, positionWS.y - 0.25f, positionWS.z);
         var normal = GetNormalWS(positionOS);
+        //Il faut que je trouve une façon de faire fonctionner la rotation du bateau sur l'eau sans que ça bloque les controles du bateau
         //transform.rotation = Quaternion.FromToRotation(Vector3.up, normal) * _originalRotation;
-        
     }
 
     Vector2 GradientNoiseDir(Vector2 p) {

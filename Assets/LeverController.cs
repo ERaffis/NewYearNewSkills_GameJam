@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,17 @@ using UnityEngine.UI;
 
 public class LeverController : MonoBehaviour
 {
+    [Header("UI Elements")]
     public Sprite[] leverSprites;
     public Image leverSprite;
     public Slider slider;
 
-
+    [HideInInspector]
+    public event EventHandler<OnWheelChangeEventArgs> OnWheelChange;
+    public class OnWheelChangeEventArgs : EventArgs
+    {
+        public int sliderValue;
+    }
     public void ChangeSprite()
     {
         var leverValue = slider.value;
@@ -35,4 +42,10 @@ public class LeverController : MonoBehaviour
                 break;
         }
     }
+
+    public void ChangedValues()
+    {
+        OnWheelChange?.Invoke(this, new OnWheelChangeEventArgs{sliderValue = (int)slider.value});
+    }
+    
 }
