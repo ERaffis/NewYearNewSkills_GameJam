@@ -55,7 +55,12 @@ public class LeverLinkControl : MonoBehaviour
     public void LinkLevers()
     {
         isLeverLinked = !isLeverLinked;
+        _linkLeverButton.image.sprite = isLeverLinked ? leverLinkedSprite : leverUnlinkedSprite;
+    }
 
+    public void LinkLevers(bool desiredState)
+    {
+        isLeverLinked = desiredState;
         _linkLeverButton.image.sprite = isLeverLinked ? leverLinkedSprite : leverUnlinkedSprite;
     }
     

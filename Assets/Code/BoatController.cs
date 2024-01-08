@@ -8,14 +8,11 @@ using VTabs.Libs;
 
 public class BoatController : MonoBehaviour
 {
-    [Header("Boat Power Status")] 
-    public bool isBoatPowered;
-
     [Header("Movement Variables")] 
     [Range(-2,2)] public int leftWheelSpeed;
     [Range(-2,2)] public int rightWheelSpeed;
-    [Range(0,0.1f)] [Tooltip("Speed modifier, the lower the number the slower the boat")]public float speedModifier;
-    [Range(0,0.1f)] [Tooltip("Rotation modifier, the lower the number the slower the boat")]public float rotationModifier;
+    [Range(0,50f)] [Tooltip("Speed modifier, the lower the number the slower the boat")]public float speedModifier;
+    [Range(0,10f)] [Tooltip("Rotation modifier, the lower the number the slower the boat")]public float rotationModifier;
     private float _boatSpeed;
     private float _desiredBoatSpeed;
     private float _rotationSpeed;
@@ -46,7 +43,7 @@ public class BoatController : MonoBehaviour
     private void Update()
     {
         AttachLevers();
-        //ChangeBothInput();
+        ChangeBothInput();
         ChangeLeftInput();
         ChangeRightInput();
            
@@ -95,6 +92,10 @@ public class BoatController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            if (_leverLinkControl.isLeverLinked)
+            {
+                _leverLinkControl.LinkLevers();
+            }
             leftWheelSpeed++;
             if (leftWheelSpeed > 2)
             {
@@ -106,6 +107,10 @@ public class BoatController : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.A))
         {
+            if (_leverLinkControl.isLeverLinked)
+            {
+                _leverLinkControl.LinkLevers();
+            }
             leftWheelSpeed--;
             if (leftWheelSpeed < -2)
             {
@@ -126,6 +131,10 @@ public class BoatController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (_leverLinkControl.isLeverLinked)
+            {
+                _leverLinkControl.LinkLevers();
+            }
             rightWheelSpeed++;
             if (rightWheelSpeed > 2)
             {
@@ -136,6 +145,10 @@ public class BoatController : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.D))
         {
+            if (_leverLinkControl.isLeverLinked)
+            {
+                _leverLinkControl.LinkLevers();
+            }
             rightWheelSpeed--;
             if (rightWheelSpeed < -2)
             {
@@ -151,8 +164,21 @@ public class BoatController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            rightWheelSpeed++;
-            leftWheelSpeed++;
+            _leverLinkControl.LinkLevers(true);
+            
+            leftWheelSpeed = rightWheelSpeed;
+
+            if (leftWheelSpeed < 0)
+            {
+                rightWheelSpeed = 1;
+                leftWheelSpeed = 1;
+            }
+            else
+            {
+                rightWheelSpeed++;
+                leftWheelSpeed++; 
+            }
+                
             if (rightWheelSpeed > 2)
             {
                 rightWheelSpeed = 2;
@@ -164,11 +190,29 @@ public class BoatController : MonoBehaviour
             leftWheelUI.slider.value = leftWheelSpeed;
             rightWheelUI.slider.value = rightWheelSpeed;
             ChangeParticleState();
+
+            if (!_leverLinkControl.isLeverLinked)
+            {
+                _leverLinkControl.LinkLevers();
+            }
         }
         else if(Input.GetKeyDown(KeyCode.S))
         {
-            rightWheelSpeed--;
-            leftWheelSpeed--;
+            _leverLinkControl.LinkLevers(true);
+            
+            leftWheelSpeed = rightWheelSpeed;
+
+            if (leftWheelSpeed > 0)
+            {
+                rightWheelSpeed = -1;
+                leftWheelSpeed = -1;
+            }
+            else
+            {
+                rightWheelSpeed--;
+                leftWheelSpeed--;
+            }
+            
             if (rightWheelSpeed < -2)
             {
                 rightWheelSpeed = -2;
@@ -209,7 +253,7 @@ public class BoatController : MonoBehaviour
     
     private void CalculateSpeed() //Takes the input of both wheel and creates a Vector2 where X is the leftWheel and Y is the rightWheel
     {
-        _desiredBoatSpeed = (rightWheelSpeed + leftWheelSpeed) * speedModifier / 60f;
+        _desiredBoatSpeed = (rightWheelSpeed + leftWheelSpeed) * (speedModifier /500) / 60f;
         //Calculate the direction of the spin
         switch (rightWheelSpeed)
         {
@@ -217,19 +261,19 @@ public class BoatController : MonoBehaviour
                 switch (leftWheelSpeed)
                 {
                     case -2:
-                        _desiredRotationSpeed = 0f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 0f * ( rotationModifier / 500) * 2f;
                         break;
                     case -1 :
-                        _desiredRotationSpeed = 5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 5f * ( rotationModifier / 500) * 2f;
                         break;
                     case 0:
-                        _desiredRotationSpeed = 10f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 10f * ( rotationModifier / 500) * 2f;
                         break;
                     case 1:
-                        _desiredRotationSpeed = 15f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 15f * ( rotationModifier / 500) * 2f;
                         break;
                     case 2:
-                        _desiredRotationSpeed = 20f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 20f * ( rotationModifier / 500) * 2f;
                         break;
                     default:
                         break;
@@ -239,19 +283,19 @@ public class BoatController : MonoBehaviour
                 switch (leftWheelSpeed)
                 {
                     case -2:
-                        _desiredRotationSpeed = -5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -5f * ( rotationModifier / 500) * 2f;
                         break;
                     case -1 :
-                        _desiredRotationSpeed = 0f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 0f * ( rotationModifier / 500) * 2f;
                         break;
                     case 0:
-                        _desiredRotationSpeed = 5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 5f * ( rotationModifier / 500) * 2f;
                         break;
                     case 1:
-                        _desiredRotationSpeed = 10f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 10f * ( rotationModifier / 500) * 2f;
                         break;
                     case 2:
-                        _desiredRotationSpeed = 15f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 15f * ( rotationModifier / 500) * 2f;
                         break;
                     default:
                         break;
@@ -261,19 +305,19 @@ public class BoatController : MonoBehaviour
                 switch (leftWheelSpeed)
                 {
                     case -2:
-                        _desiredRotationSpeed = -10f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -10f * ( rotationModifier / 500) * 2f;
                         break;
                     case -1 :
-                        _desiredRotationSpeed = -5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -5f * ( rotationModifier / 500) * 2f;
                         break;
                     case 0:
-                        _desiredRotationSpeed = 0f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 0f * ( rotationModifier / 500) * 2f;
                         break;
                     case 1:
-                        _desiredRotationSpeed = 5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 5f * ( rotationModifier / 500) * 2f;
                         break;
                     case 2:
-                        _desiredRotationSpeed = 10f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 10f * ( rotationModifier / 500) * 2f;
                         break;
                     default:
                         break;
@@ -283,19 +327,19 @@ public class BoatController : MonoBehaviour
                 switch (leftWheelSpeed)
                 {
                     case -2:
-                        _desiredRotationSpeed = -15f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -15f * ( rotationModifier / 500) * 2f;
                         break;
                     case -1 :
-                        _desiredRotationSpeed = -10f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -10f * ( rotationModifier / 500) * 2f;
                         break;
                     case 0:
-                        _desiredRotationSpeed = -5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -5f * ( rotationModifier / 500) * 2f;
                         break;
                     case 1:
-                        _desiredRotationSpeed = 0f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 0f * ( rotationModifier / 500) * 2f;
                         break;
                     case 2:
-                        _desiredRotationSpeed = 5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 5f * ( rotationModifier / 500) * 2f;
                         break;
                     default:
                         break;
@@ -305,19 +349,19 @@ public class BoatController : MonoBehaviour
                 switch (leftWheelSpeed)
                 {
                     case -2:
-                        _desiredRotationSpeed = -20f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -20f * ( rotationModifier / 500) * 2f;
                         break;
                     case -1 :
-                        _desiredRotationSpeed = -15f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -15f * ( rotationModifier / 500) * 2f;
                         break;
                     case 0:
-                        _desiredRotationSpeed = -10f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -10f * ( rotationModifier / 500) * 2f;
                         break;
                     case 1:
-                        _desiredRotationSpeed = -5f * rotationModifier * 2f;
+                        _desiredRotationSpeed = -5f * ( rotationModifier / 500) * 2f;
                         break;
                     case 2:
-                        _desiredRotationSpeed = 0f * rotationModifier * 2f;
+                        _desiredRotationSpeed = 0f * ( rotationModifier / 500) * 2f;
                         break;
                     default:
                         break;
