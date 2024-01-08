@@ -32,7 +32,7 @@ public class BoatController : MonoBehaviour
     public TrailRenderer lwTrail;
     public TrailRenderer rwTrail;
 
-    
+    [SerializeField] private LeverLinkControl _leverLinkControl;
     [SerializeField] private LeverWheelControl leftWheelUI;
     [SerializeField] private LeverWheelControl rightWheelUI;
    
@@ -45,8 +45,8 @@ public class BoatController : MonoBehaviour
 
     private void Update()
     {
-        PowerBoatOnOff();
-        ChangeBothInput();
+        AttachLevers();
+        //ChangeBothInput();
         ChangeLeftInput();
         ChangeRightInput();
            
@@ -77,14 +77,11 @@ public class BoatController : MonoBehaviour
     }
 
 
-    private void PowerBoatOnOff()
+    private void AttachLevers()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            leftWheelSpeed = 0;
-            rightWheelSpeed = 0;
-            leftWheelUI.slider.value = leftWheelSpeed;
-            rightWheelUI.slider.value = rightWheelSpeed;
+            _leverLinkControl.LinkLevers();
         }
     }
 
