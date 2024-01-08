@@ -24,6 +24,14 @@ public class BoatController : MonoBehaviour
     [Header("Visuals")] 
     public GameObject leftWheelModel;
     public GameObject rightWheelModel;
+    public ParticleSystem leftWheelFrontParticle;
+    public ParticleSystem leftWheelBackParticle;
+    public ParticleSystem rightWheelFrontParticle;
+    public ParticleSystem rightWheelBackParticle;
+    public TrailRenderer boatTrail;
+    public TrailRenderer lwTrail;
+    public TrailRenderer rwTrail;
+
     
     [SerializeField] private LeverWheelControl leftWheelUI;
     [SerializeField] private LeverWheelControl rightWheelUI;
@@ -41,12 +49,13 @@ public class BoatController : MonoBehaviour
         ChangeBothInput();
         ChangeLeftInput();
         ChangeRightInput();
-            
+           
         if (rightWheelSpeed !=0 | leftWheelSpeed !=0)
         {
             CalculateSpeed();
             CalculateDirection();
             RotateWheels();
+            
         }
         else
         {
@@ -54,6 +63,8 @@ public class BoatController : MonoBehaviour
             _rotationSpeed = Mathf.Lerp(_rotationSpeed, 0, Time.deltaTime * 0.5f);
             CalculateDirection();
         }
+
+        BoatTrails();
     }
     
     //Rotates the wheels visually
@@ -76,10 +87,12 @@ public class BoatController : MonoBehaviour
             rightWheelUI.slider.value = rightWheelSpeed;
         }
     }
-  
+
+    
     private void ChangeLeftInput(object sender, LeverWheelControl.OnWheelChangeEventArgs e)
     {
         leftWheelSpeed = e.sliderValue;
+        ChangeParticleState();
     }
     private void ChangeLeftInput()
     {
@@ -92,6 +105,7 @@ public class BoatController : MonoBehaviour
             }
 
             leftWheelUI.slider.value = leftWheelSpeed;
+            ChangeParticleState();
         }
         else if(Input.GetKeyDown(KeyCode.A))
         {
@@ -101,12 +115,14 @@ public class BoatController : MonoBehaviour
                 leftWheelSpeed = -2;
             }
             leftWheelUI.slider.value = leftWheelSpeed;
+            ChangeParticleState();
         }
     }
     
     private void ChangeRightInput(object sender, LeverWheelControl.OnWheelChangeEventArgs e)
     {
         rightWheelSpeed = e.sliderValue;
+        ChangeParticleState();
     }
     
     private void ChangeRightInput()
@@ -119,6 +135,7 @@ public class BoatController : MonoBehaviour
                 rightWheelSpeed = 2;
             }
             rightWheelUI.slider.value = rightWheelSpeed;
+            ChangeParticleState();
         }
         else if(Input.GetKeyDown(KeyCode.D))
         {
@@ -128,9 +145,11 @@ public class BoatController : MonoBehaviour
                 rightWheelSpeed = -2;
             }
             rightWheelUI.slider.value = rightWheelSpeed;
+            ChangeParticleState();
         }
     }
     
+    //Il faut regler le proble que quand les levier sont attache ca fait double coche
     private void ChangeBothInput()
     {
         if (Input.GetKeyDown(KeyCode.W))
@@ -147,6 +166,7 @@ public class BoatController : MonoBehaviour
             }
             leftWheelUI.slider.value = leftWheelSpeed;
             rightWheelUI.slider.value = rightWheelSpeed;
+            ChangeParticleState();
         }
         else if(Input.GetKeyDown(KeyCode.S))
         {
@@ -162,9 +182,33 @@ public class BoatController : MonoBehaviour
             }
             leftWheelUI.slider.value = leftWheelSpeed;
             rightWheelUI.slider.value = rightWheelSpeed;
+            ChangeParticleState();
         }
     }
-    
+
+    private void ChangeParticleState()
+    {
+        if (leftWheelSpeed != 0)
+        {
+            leftWheelFrontParticle.Play();
+            leftWheelBackParticle.Play();
+        }
+        else
+        {
+            leftWheelFrontParticle.Stop();
+            leftWheelBackParticle.Stop();
+        }
+        if (rightWheelSpeed != 0)
+        {
+            rightWheelFrontParticle.Play();
+            rightWheelBackParticle.Play();
+        }
+        else
+        {
+            rightWheelFrontParticle.Stop();
+            rightWheelBackParticle.Stop();
+        }
+    }
     
     private void CalculateSpeed() //Takes the input of both wheel and creates a Vector2 where X is the leftWheel and Y is the rightWheel
     {
@@ -296,5 +340,21 @@ public class BoatController : MonoBehaviour
 
         transform.Rotate(Vector3.up, _rotationSpeed, Space.World);
         
+    }
+
+    private void BoatTrails()
+    {
+        if (_boatSpeed == 0)
+        {
+            boatTrail.emitting = false;
+            rwTrail.emitting = false;
+            lwTrail.emitting = false;
+        }
+        else
+        {
+            boatTrail.emitting = true;
+            rwTrail.emitting = true;
+            lwTrail.emitting = true;
+        }
     }
 }

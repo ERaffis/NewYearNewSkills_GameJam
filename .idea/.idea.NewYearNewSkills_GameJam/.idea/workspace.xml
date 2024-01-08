@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e47fdab-2b5b-4017-ad6e-b7a4596d4e2b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign~lock~" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign~lock~" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/BoatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BoatController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic01__StylSurf_Single_ExtraC_Spec.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic01__StylSurf_Single_ExtraC_Spec.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic02__StylSurf_Single_ExtraC_Spec_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic02__StylSurf_Single_ExtraC_Spec_Rim.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothExtraCel__StylSurf_ExtraC_Spec.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothExtraCel__StylSurf_ExtraC_Spec.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Toon02__StylSurf_Single_ExtraC_Spec.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Toon02__StylSurf_Single_ExtraC_Spec.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +109,7 @@
       <updated>1704649656411</updated>
       <workItem from="1704649658405" duration="19127000" />
       <workItem from="1704728096343" duration="42000" />
-      <workItem from="1704728146746" duration="4187000" />
+      <workItem from="1704728146746" duration="7527000" />
     </task>
     <servers />
   </component>

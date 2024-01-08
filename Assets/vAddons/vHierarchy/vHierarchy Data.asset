@@ -13,5 +13,54 @@ MonoBehaviour:
   m_Name: vHierarchy Data
   m_EditorClassIdentifier: 
   sceneDatasByGuid:
-    keys: []
-    values: []
+    keys:
+    - 99c9720ab356a0642a771bea13969a05
+    - 
+    values:
+    - goDatasByGlobalId:
+        keys:
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1376390549-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-578791667-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1666676276-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-911280849-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-363497223-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1246596465-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-2020217920-0
+        values:
+        - iColor: 4
+          icon: Folder Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 2
+          icon: Folder Icon
+        - iColor: 3
+          icon: Folder Icon
+      goDatasByInstanceId:
+        keys: 787bfdff2888fdff2a88fdff688bfdff4c59feff2686fdffba79fdff
+        values:
+        - iColor: 4
+          icon: Folder Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 2
+          icon: Folder Icon
+        - iColor: 3
+          icon: Folder Icon
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []
