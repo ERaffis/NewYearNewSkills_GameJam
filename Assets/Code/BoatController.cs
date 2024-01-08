@@ -25,17 +25,14 @@ public class BoatController : MonoBehaviour
     public GameObject leftWheelModel;
     public GameObject rightWheelModel;
     
-    [SerializeField] private ShipUiControls leftWheelUI;
-    [SerializeField] private ShipUiControls rightWheelUI;
-    [SerializeField] private ShipUiControls goButtonUI;
-    [SerializeField] private ShipUiControls stopButtonUI;
+    [SerializeField] private LeverWheelControl leftWheelUI;
+    [SerializeField] private LeverWheelControl rightWheelUI;
+   
 
     private void Start()
     {
         leftWheelUI.OnWheelChange += ChangeLeftInput;
         rightWheelUI.OnWheelChange += ChangeRightInput;
-        goButtonUI.OnGoPressed += PowerBoatOn;
-        stopButtonUI.OnStopPressed += PowerBoatOff;
     }
 
     private void Update()
@@ -45,7 +42,7 @@ public class BoatController : MonoBehaviour
         ChangeLeftInput();
         ChangeRightInput();
             
-        if (isBoatPowered)
+        if (rightWheelSpeed !=0 | leftWheelSpeed !=0)
         {
             CalculateSpeed();
             CalculateDirection();
@@ -73,34 +70,15 @@ public class BoatController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            isBoatPowered = !isBoatPowered;
-            if (isBoatPowered)
-            {
-                goButtonUI.goButton.image.sprite = goButtonUI.goSpriteOn;
-                stopButtonUI.stopButton.image.sprite = stopButtonUI.stopSpriteOff;
-            }
-            else
-            {
-                goButtonUI.goButton.image.sprite = goButtonUI.goSpriteOff;
-                stopButtonUI.stopButton.image.sprite = stopButtonUI.stopSpriteOn;
-            }
+            leftWheelSpeed = 0;
+            rightWheelSpeed = 0;
+            leftWheelUI.slider.value = leftWheelSpeed;
+            rightWheelUI.slider.value = rightWheelSpeed;
         }
     }
-    private void PowerBoatOn(object sender, EventArgs e)
+  
+    private void ChangeLeftInput(object sender, LeverWheelControl.OnWheelChangeEventArgs e)
     {
-        isBoatPowered = true;
-        Debug.Log(isBoatPowered+ " Powered On");
-    }
-
-    private void PowerBoatOff(object sender, EventArgs e)
-    {
-        isBoatPowered = false;
-        Debug.Log(isBoatPowered + " Powered Off");
-    }
-    
-    private void ChangeLeftInput(object sender, ShipUiControls.OnWheelChangeEventArgs e)
-    {
-        Debug.Log(e.sliderValue);
         leftWheelSpeed = e.sliderValue;
     }
     private void ChangeLeftInput()
@@ -126,9 +104,8 @@ public class BoatController : MonoBehaviour
         }
     }
     
-    private void ChangeRightInput(object sender, ShipUiControls.OnWheelChangeEventArgs e)
+    private void ChangeRightInput(object sender, LeverWheelControl.OnWheelChangeEventArgs e)
     {
-        Debug.Log(e.sliderValue);
         rightWheelSpeed = e.sliderValue;
     }
     

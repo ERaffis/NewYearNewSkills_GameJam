@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LeverController : MonoBehaviour
+public class LeverWheelControl : MonoBehaviour
 {
-    [Header("UI Elements")]
+    [Header("UI Elements")] 
+    
+    [Header("Wheel Controls")]
     public Sprite[] leverSprites;
     public Image leverSprite;
     public Slider slider;
+    
 
     [HideInInspector]
     public event EventHandler<OnWheelChangeEventArgs> OnWheelChange;
@@ -17,10 +20,21 @@ public class LeverController : MonoBehaviour
     {
         public int sliderValue;
     }
-    public void ChangeSprite()
+
+    public void ChangedValues()
+    {
+        ChangeWheelControls();
+    }
+    
+    public void ChangeWheelControls()
+    {
+        OnWheelChange?.Invoke(this, new OnWheelChangeEventArgs{sliderValue = (int)slider.value});
+        ChangeLeverSprite();
+    }
+    private void ChangeLeverSprite()
     {
         var leverValue = slider.value;
-
+        
         switch (leverValue)
         {
             case -2:
@@ -42,10 +56,6 @@ public class LeverController : MonoBehaviour
                 break;
         }
     }
-
-    public void ChangedValues()
-    {
-        OnWheelChange?.Invoke(this, new OnWheelChangeEventArgs{sliderValue = (int)slider.value});
-    }
+    
     
 }

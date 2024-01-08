@@ -150,17 +150,17 @@ RectTransform:
   m_GameObject: {fileID: 63750579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1394978037}
   - {fileID: 1474368647}
   m_Father: {fileID: 1779501825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 0}
-  m_SizeDelta: {x: 20, y: 375}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 35, y: 135}
+  m_SizeDelta: {x: 20, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63750582
 MonoBehaviour:
@@ -214,7 +214,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 63750583}
-        m_TargetAssemblyTypeName: ShipUiControls, Assembly-CSharp
+        m_TargetAssemblyTypeName: LeverWheelControl, Assembly-CSharp
         m_MethodName: ChangeWheelControls
         m_Mode: 1
         m_Arguments:
@@ -237,12 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4ffb584e34b1740ab2a84c93ff4a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goSpriteOn: {fileID: 0}
-  goSpriteOff: {fileID: 0}
-  stopSpriteOn: {fileID: 0}
-  stopSpriteOff: {fileID: 0}
-  goButton: {fileID: 0}
-  stopButton: {fileID: 0}
   leverSprites:
   - {fileID: 21300000, guid: d6d945a5643a98d4ca003fa31713ef9c, type: 3}
   - {fileID: 21300000, guid: 5774f34723ee0c641b6c6390dbadfc14, type: 3}
@@ -340,160 +334,6 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
---- !u!1 &147000739
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 147000740}
-  - component: {fileID: 147000743}
-  - component: {fileID: 147000742}
-  - component: {fileID: 147000741}
-  - component: {fileID: 147000744}
-  m_Layer: 5
-  m_Name: Button_Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &147000740
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147000739}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1779501825}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 100, y: 85.9673}
-  m_SizeDelta: {x: 171.9346, y: 171.9346}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &147000741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147000739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 147000742}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 147000744}
-        m_TargetAssemblyTypeName: ShipUiControls, Assembly-CSharp
-        m_MethodName: PressedPowerButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &147000742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147000739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 15, y: 50, z: 15, w: 50}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 233931309f7164e4aab9039d35f7698c, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &147000743
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147000739}
-  m_CullTransparentMesh: 1
---- !u!114 &147000744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147000739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4ffb584e34b1740ab2a84c93ff4a29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goSpriteOn: {fileID: 21300000, guid: 586f6da0921e37a4e941d63133ea1906, type: 3}
-  goSpriteOff: {fileID: 21300000, guid: 2928881976d112c4e9c659d3a71c75a9, type: 3}
-  stopSpriteOn: {fileID: 21300000, guid: 233931309f7164e4aab9039d35f7698c, type: 3}
-  stopSpriteOff: {fileID: 21300000, guid: f582153402a72d64085dd4e907e5de26, type: 3}
-  goButton: {fileID: 2133341440}
-  stopButton: {fileID: 147000741}
-  leverSprites: []
-  leverSprite: {fileID: 0}
-  slider: {fileID: 0}
 --- !u!1 &165717370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,14 +1149,14 @@ RectTransform:
   m_GameObject: {fileID: 433674052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474368647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 33.3, y: 7}
+  m_AnchoredPosition: {x: 21.6, y: 0}
   m_SizeDelta: {x: 88.7348, y: 95.5798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433674054
@@ -1594,17 +1434,17 @@ RectTransform:
   m_GameObject: {fileID: 496664163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1162549959}
   - {fileID: 1768308218}
   m_Father: {fileID: 1779501825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
-  m_SizeDelta: {x: 20, y: 375}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -35, y: 135}
+  m_SizeDelta: {x: 20, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496664166
 MonoBehaviour:
@@ -1653,12 +1493,12 @@ MonoBehaviour:
   m_MinValue: -2
   m_MaxValue: 2
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: -0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 496664167}
-        m_TargetAssemblyTypeName: ShipUiControls, Assembly-CSharp
+        m_TargetAssemblyTypeName: LeverWheelControl, Assembly-CSharp
         m_MethodName: ChangeWheelControls
         m_Mode: 1
         m_Arguments:
@@ -1681,12 +1521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4ffb584e34b1740ab2a84c93ff4a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goSpriteOn: {fileID: 0}
-  goSpriteOff: {fileID: 0}
-  stopSpriteOn: {fileID: 0}
-  stopSpriteOff: {fileID: 0}
-  goButton: {fileID: 0}
-  stopButton: {fileID: 0}
   leverSprites:
   - {fileID: 21300000, guid: d6d945a5643a98d4ca003fa31713ef9c, type: 3}
   - {fileID: 21300000, guid: 5774f34723ee0c641b6c6390dbadfc14, type: 3}
@@ -2142,14 +1976,14 @@ RectTransform:
   m_GameObject: {fileID: 815001067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768308218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 33.3, y: 7}
+  m_AnchoredPosition: {x: 21.6, y: 0}
   m_SizeDelta: {x: 88.7348, y: 95.5798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &815001069
@@ -2800,7 +2634,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512, y: 488.01}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1162549960
 MonoBehaviour:
@@ -3003,7 +2837,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512, y: 488.01}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394978038
 MonoBehaviour:
@@ -3737,7 +3571,6 @@ RectTransform:
   - {fileID: 496664164}
   - {fileID: 63750580}
   - {fileID: 2133341439}
-  - {fileID: 147000740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3895,7 +3728,7 @@ GameObject:
   - component: {fileID: 2133341440}
   - component: {fileID: 2133341443}
   m_Layer: 5
-  m_Name: Button_Go
+  m_Name: Button_Attache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3917,8 +3750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -100, y: 85.9673}
-  m_SizeDelta: {x: 171.9346, y: 171.9346}
+  m_AnchoredPosition: {x: 0, y: 135}
+  m_SizeDelta: {x: 49.0042, y: 49.0042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2133341440
 MonoBehaviour:
@@ -3965,8 +3798,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2133341443}
-        m_TargetAssemblyTypeName: ShipUiControls, Assembly-CSharp
-        m_MethodName: PressedPowerButton
+        m_TargetAssemblyTypeName: LeverLinkControl, Assembly-CSharp
+        m_MethodName: LinkLevers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3996,7 +3829,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2928881976d112c4e9c659d3a71c75a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16faf7fd3ff779a46ad3a04fd408b70b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4023,18 +3856,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2133341438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4ffb584e34b1740ab2a84c93ff4a29, type: 3}
+  m_Script: {fileID: 11500000, guid: 135e2888818c8574999ace31eaa01911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goSpriteOn: {fileID: 21300000, guid: 586f6da0921e37a4e941d63133ea1906, type: 3}
-  goSpriteOff: {fileID: 21300000, guid: 2928881976d112c4e9c659d3a71c75a9, type: 3}
-  stopSpriteOn: {fileID: 21300000, guid: 233931309f7164e4aab9039d35f7698c, type: 3}
-  stopSpriteOff: {fileID: 21300000, guid: f582153402a72d64085dd4e907e5de26, type: 3}
-  goButton: {fileID: 2133341440}
-  stopButton: {fileID: 147000741}
-  leverSprites: []
-  leverSprite: {fileID: 0}
-  slider: {fileID: 0}
+  isLeverLinked: 0
+  leverLinkedSprite: {fileID: 21300000, guid: 16faf7fd3ff779a46ad3a04fd408b70b, type: 3}
+  leverUnlinkedSprite: {fileID: 21300000, guid: 8bbb011e3a459fa489bf1ad7f48a1d1c,
+    type: 3}
+  leftLever: {fileID: 496664166}
+  rightLever: {fileID: 63750582}
 --- !u!4 &543450652369138395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1403757237009129092, guid: 56f8f1d64074e8d4ab12b770d584b186,
@@ -4126,7 +3956,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goButtonUI
       value: 
-      objectReference: {fileID: 2133341443}
+      objectReference: {fileID: 0}
     - target: {fileID: 462014056565314727, guid: a5e63967d5551d146bdda8d8a5cf2453,
         type: 3}
       propertyPath: leftWheelUI
@@ -4141,7 +3971,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stopButtonUI
       value: 
-      objectReference: {fileID: 147000744}
+      objectReference: {fileID: 0}
     - target: {fileID: 462014056565314727, guid: a5e63967d5551d146bdda8d8a5cf2453,
         type: 3}
       propertyPath: leftWheelModel
