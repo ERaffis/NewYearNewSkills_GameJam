@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e47fdab-2b5b-4017-ad6e-b7a4596d4e2b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/BoatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BoatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LeverController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LeverController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ShipUiControls.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ShipUiControls.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign~lock~" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign~lock~" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +101,7 @@
       <updated>1704649656411</updated>
       <workItem from="1704649658405" duration="19127000" />
       <workItem from="1704728096343" duration="42000" />
-      <workItem from="1704728146746" duration="3858000" />
+      <workItem from="1704728146746" duration="4187000" />
     </task>
     <servers />
   </component>
