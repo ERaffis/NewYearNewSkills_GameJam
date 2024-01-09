@@ -1112,6 +1112,8 @@ MonoBehaviour:
   activeCable: {fileID: 0}
   allCables: []
   cableConnector: {fileID: 523631602}
+  desiredTime: 2.5
+  timer: 0
 --- !u!1 &367173601
 GameObject:
   m_ObjectHideFlags: 0

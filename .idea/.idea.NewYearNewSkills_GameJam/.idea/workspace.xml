@@ -6,21 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0e47fdab-2b5b-4017-ad6e-b7a4596d4e2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/StonePillar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/StonePillar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Untitled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Untitled.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign~lock~" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/BoatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BoatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/PlayerAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/PlayerAudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/DarkPaleWhiteRim__StylSurf_Single_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/DarkPaleWhiteRim__StylSurf_Single_Rim.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Scripts/Buoyancy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Scripts/Buoyancy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingSceneEddy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingSceneEddy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/CableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/CableManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +110,8 @@
       <workItem from="1704747957223" duration="837000" />
       <workItem from="1704762704227" duration="1030000" />
       <workItem from="1704817287429" duration="8530000" />
-      <workItem from="1704826439976" duration="1000" />
+      <workItem from="1704826442200" duration="1991000" />
+      <workItem from="1704829234378" duration="681000" />
     </task>
     <servers />
   </component>
