@@ -171,7 +171,7 @@ MonoBehaviour:
     FromTexture: {fileID: 0}
   _UseSunLight:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   _SunColor:
     m_OverrideState: 1
     m_Value: {r: 0.76470596, g: 0.50980395, b: 0.32156864, a: 1}
@@ -186,13 +186,13 @@ MonoBehaviour:
     m_Value: 1
   _UseRadialDistance:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   _FogType:
     m_OverrideState: 1
     m_Value: 3
   _DistanceFogOffset:
     m_OverrideState: 1
-    m_Value: -25
+    m_Value: -24.47
   _SceneStart:
     m_OverrideState: 0
     m_Value: 10
@@ -201,31 +201,31 @@ MonoBehaviour:
     m_Value: 100
   _FogDensity:
     m_OverrideState: 1
-    m_Value: 0.0039
+    m_Value: 0.0317
   _UseSkyboxHeightFog:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   _SkyboxFogOffset:
     m_OverrideState: 1
-    m_Value: 0.0566
+    m_Value: -0.0803
   _SkyboxFogHardness:
     m_OverrideState: 1
-    m_Value: 0.441
+    m_Value: 0.091
   _SkyboxFogIntensity:
     m_OverrideState: 1
-    m_Value: 0.418
+    m_Value: 0.852
   _SkyboxFill:
     m_OverrideState: 1
-    m_Value: 0.509
+    m_Value: 0.282
   _UseHeightFog:
     m_OverrideState: 1
     m_Value: 1
   _Height:
     m_OverrideState: 1
-    m_Value: 6.88
+    m_Value: 5.95
   _HeightDensity:
     m_OverrideState: 1
-    m_Value: 0.193
+    m_Value: 0.083
   _HeightFogType:
     m_OverrideState: 1
     m_Value: 2
@@ -233,53 +233,53 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   _NoiseAffect:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   _NoiseIntensity:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.657
   _NoiseDistanceEnd:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 80
   _NoiseEndHardness:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 7.74
   _Scale1:
-    m_OverrideState: 0
-    m_Value: 40
+    m_OverrideState: 1
+    m_Value: 46.9
   _Lerp1:
-    m_OverrideState: 0
-    m_Value: 0.5
+    m_OverrideState: 1
+    m_Value: 0.819
   _NoiseSpeed1:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0, y: 0, z: 0}
   _NoiseTimeScale1:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.1
   _UseSSMS:
     m_OverrideState: 1
     m_Value: 1
   _Threshold:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.721
   _SoftKnee:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
   _Radius:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 7
   _BlurWeight:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 44
   _Intensity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   _HighQuality:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   _AntiFlicker:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   _FadeRamp:
     m_OverrideState: 0
     m_Value: {fileID: 0}
