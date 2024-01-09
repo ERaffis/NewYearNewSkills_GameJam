@@ -170,8 +170,8 @@ public class BoatController : MonoBehaviour
 
             if (leftWheelSpeed < 0)
             {
-                rightWheelSpeed = 1;
-                leftWheelSpeed = 1;
+                rightWheelSpeed = 0;
+                leftWheelSpeed = 0;
             }
             else
             {
@@ -204,8 +204,8 @@ public class BoatController : MonoBehaviour
 
             if (leftWheelSpeed > 0)
             {
-                rightWheelSpeed = -1;
-                leftWheelSpeed = -1;
+                rightWheelSpeed = 0;
+                leftWheelSpeed = 0;
             }
             else
             {

@@ -6,13 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="0e47fdab-2b5b-4017-ad6e-b7a4596d4e2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/PlayerBoat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/PlayerBoat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/AudioFadeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/AudioFadeScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAudioManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAudioManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/StonePillar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/StonePillar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Untitled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Untitled.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign~lock~" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/BoatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BoatController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/PlayerAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/PlayerAudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/DarkPaleWhiteRim__StylSurf_Single_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/DarkPaleWhiteRim__StylSurf_Single_Rim.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Scripts/Buoyancy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Scripts/Buoyancy.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingSceneEddy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingSceneEddy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +31,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bff907ed581f483ab4bd129472866e971fe00/cf/3259aacb/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/37/dfc532fd/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/45/45df1b0b/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/86/5c4c6388/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/AudioFadeOut.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/BoatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Buoy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/BuoyancyStatic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/LeverWheelControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerAudioManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,6 +122,8 @@
       <workItem from="1704728146746" duration="14047000" />
       <workItem from="1704747957223" duration="837000" />
       <workItem from="1704762704227" duration="1030000" />
+      <workItem from="1704817287429" duration="8530000" />
+      <workItem from="1704826439976" duration="1000" />
     </task>
     <servers />
   </component>
