@@ -22,11 +22,11 @@ public static class AudioFadeScript
 
     public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime, float max)
     {
-        while (isFading)
+        /*while (isFading)
         {
             yield return new WaitForSeconds(0.5f);
         }
-
+        */
         float startVolume = 0.2f;
         audioSource.volume = 0;
         audioSource.Play();

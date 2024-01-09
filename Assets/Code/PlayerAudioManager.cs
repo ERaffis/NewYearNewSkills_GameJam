@@ -23,6 +23,8 @@ public class PlayerAudioManager : MonoBehaviour
     {
         PlayAudio();
         StopAudio();
+        Debug.Log("Left is playing : " + lwSource.isPlaying);
+        Debug.Log("Right is playing : " + rwSource.isPlaying);
     }
 
     private void PlayAudio()
