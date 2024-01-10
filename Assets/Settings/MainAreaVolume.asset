@@ -173,10 +173,10 @@ MonoBehaviour:
     m_Value: 100
   _FogDensity:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0
   _UseSkyboxHeightFog:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   _SkyboxFogOffset:
     m_OverrideState: 1
     m_Value: -0.1
@@ -185,19 +185,19 @@ MonoBehaviour:
     m_Value: 0
   _SkyboxFogIntensity:
     m_OverrideState: 1
-    m_Value: 0.448
+    m_Value: 0.341
   _SkyboxFill:
     m_OverrideState: 1
-    m_Value: 0.776
+    m_Value: 0.504
   _UseHeightFog:
     m_OverrideState: 1
     m_Value: 1
   _Height:
     m_OverrideState: 1
-    m_Value: -2.75
+    m_Value: 91.5
   _HeightDensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.022
   _HeightFogType:
     m_OverrideState: 1
     m_Value: 2

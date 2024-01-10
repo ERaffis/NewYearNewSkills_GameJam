@@ -6,45 +6,46 @@
   <component name="ChangeListManager">
     <list default="true" id="0e47fdab-2b5b-4017-ad6e-b7a4596d4e2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewYearNewSkills_GameJam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/BuoySelfIllum.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/BuoySelfIllum.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Cable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Cable.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/MusicAndAudio/Audio credits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/MusicAndAudio/Audio credits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/ao_buoy.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/ao_buoy.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/BuoyPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/BuoyPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/CablePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/CablePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/PlayerBoat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/PlayerBoat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBackground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBase.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBottom-Mid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBottom-Mid.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverBottom.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverTop-Mid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverTop-Mid.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverTop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LeverTop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LevierAttache.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LevierAttache.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LevierDetache.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/LevierDetache.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/WorkDocument.afdesign" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/preview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/preview.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buoy.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/BoatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BoatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/CableConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/CableConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/ConnectionPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/ConnectionPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/+1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/+1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/+2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/+2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/1st Person.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/1st Person.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/3rd Person.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/3rd Person.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Button_Go_Off.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Button_Go_Off.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Button_Go_On.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Button_Go_On.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Button_Stop_Off.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Button_Stop_Off.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Button_Stop_On.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Button_Stop_On.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Cable Length.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Cable Length.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/CableTest.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/CableTest.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Compass.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Compass.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/ConsoleBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/ConsoleBackground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Place Buoy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Place Buoy.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Start Dropping.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Start Dropping.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Stop Dropping.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Stop Dropping.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Trim.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/Trim.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChangeCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChangeCamera.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/CableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/CableManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/PlayerAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/PlayerAudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingSceneEddy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingSceneEddy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/vAddons/vHierarchy/vHierarchy Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/MainAreaVolume.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/MainAreaVolume.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +60,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/37/dfc532fd/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/45/45df1b0b/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/86/5c4c6388/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ChangeCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/BoatController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Buoy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/BuoyancyStatic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/CustomButtonShape.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/LeverWheelControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/PowerCable.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -151,6 +152,7 @@
       <workItem from="1704817287429" duration="8530000" />
       <workItem from="1704826442200" duration="1991000" />
       <workItem from="1704829234378" duration="8739000" />
+      <workItem from="1704907243847" duration="12426000" />
     </task>
     <servers />
   </component>

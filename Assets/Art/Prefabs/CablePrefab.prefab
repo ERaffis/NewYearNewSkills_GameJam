@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4948913352388364578}
+  - component: {fileID: 2045518945946882213}
   - component: {fileID: 3257919046496579119}
   m_Layer: 0
   m_Name: CablePrefab
@@ -32,6 +33,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045518945946882213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3168268890061520232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28f003c2fbc42e43ba45b8e890e5173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connections: []
+  isPowered: 0
+  lineRenderer: {fileID: 3257919046496579119}
+  firstConnection: {fileID: 0}
+  endConnection: {fileID: 0}
 --- !u!120 &3257919046496579119
 LineRenderer:
   serializedVersion: 2

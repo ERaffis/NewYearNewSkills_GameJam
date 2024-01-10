@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WaterPlane
   - ConnexionTerre
+  - CableManager
   layers:
   - Default
   - TransparentFX

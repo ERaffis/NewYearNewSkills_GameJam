@@ -13,38 +13,147 @@ public class CableManager : MonoBehaviour
     public GameObject buoyPrefab;
 
     public GameObject cableContainer;
-    public LineRenderer activeCable;
-    public List<LineRenderer> allCables = new List<LineRenderer>();
+    public PowerCable activeCable;
+    public List<PowerCable> allCables = new List<PowerCable>();
 
     public CableConnector cableConnector;
-
-    public GameObject firstPoint;
-    public GameObject lastPoint;
     
     public float desiredTime;
     public float timer;
+
+    public event EventHandler OnCableConnection;
+    
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         lastPosition = boatAttachPoint.position;
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-        FollowBoat();
-        
-        //if (Input.GetKeyDown(KeyCode.Mouse0)) StartNewCable();
-        //if (Input.GetKeyDown(KeyCode.Mouse1)) StopCable();
-        
+        if (Input.GetKeyDown(KeyCode.R)) StartNewCable();
+        if (Input.GetKeyDown(KeyCode.F)) StopCable();
     }
-
     private void LateUpdate()
     {
         PlaceCablePoint();
+        FollowBoat();
     }
 
+    
+    public void StartNewCable()
+    {
+        if (activeCable == null)
+        { 
+            
+            //Instantiates new cable and assigns its LineRenderer to the active cable
+            GameObject startCable = Instantiate(cablePrefab, cableContainer.transform);
+            
+            //Sets the activeCable (currently placing) has the PowerCable of the GameOject
+            activeCable = startCable.GetComponent<PowerCable>();
+            
+            //Checks for connectors close by to attach the first point of the cable
+            var closetConnector = cableConnector.CheckCollision();
+            
+            //If it finds a connector (either a buoy or a land connector)
+            if (closetConnector != null)
+            {
+                var connectionPort = closetConnector.transform.parent.gameObject.GetComponent<ConnectionPort>();
+                
+                //Sets the start connection point of the cable
+                activeCable.AddStartConnection(connectionPort);
+                
+                //Adds the power cable to the connector
+                connectionPort.Connect(activeCable); 
+                
+                //Sets the position of the start cable point
+                activeCable.lineRenderer.SetPosition(0,closetConnector.transform.position);
+                
+                //Sets the power state of the cable
+                activeCable.SetPowerState(connectionPort);
+            }
+            else
+            {
+                var connectionPort = PlaceBuoy();
+                
+                activeCable.lineRenderer.SetPosition(0,cablePlacementPoint.position - new Vector3(0,0.5f,0));
+                
+                //Sets the start connection point of the cable
+                activeCable.AddStartConnection(connectionPort);
+                
+                //Adds the powercable to the connector
+                connectionPort.Connect(activeCable);
+                
+                //Sets the power state of the cable
+                activeCable.SetPowerState(connectionPort);
+            }
+            
+            
+             
+        }
+    }
+    public void StopCable()
+    {
+        if (activeCable == null) return;
+        
+        //Resets the last position
+        lastPosition = boatAttachPoint.position;
+            
+        
+        //Checks for connectors close by to attach the end point of the cable
+        var closetConnector = cableConnector.CheckCollision();
+            
+        //If it finds a connector (either a buoy or a land connector)
+        if (closetConnector != null && closetConnector.transform.parent.gameObject != activeCable.firstConnection.gameObject)
+        {
+            var connectionPort = closetConnector.transform.parent.gameObject.GetComponent<ConnectionPort>();
+                
+            //Sets the end connection point of the cable
+            activeCable.AddEndConnection(connectionPort);
+            
+            //Adds the power cable to the connector
+            connectionPort.Connect(activeCable); 
+            
+            //Sets the position of the end cable point
+            activeCable.lineRenderer.SetPosition(activeCable.lineRenderer.positionCount-1,closetConnector.transform.position); 
+            
+            //Sets the power state of the cable
+            activeCable.SetPowerState(connectionPort);
+            
+        }
+        else
+        {
+            var connectionPort = PlaceBuoy();
+            
+            //Sets the start connection point of the cable
+            activeCable.AddEndConnection(connectionPort);
+                
+            //Adds the powercable to the connector
+            connectionPort.Connect(activeCable); 
+            
+            //Sets the position of the end cable point
+            activeCable.lineRenderer.SetPosition(activeCable.lineRenderer.positionCount-1,connectionPort.transform.position - new Vector3(0,1f,0));
+            
+            //Sets the power state of the cable
+            activeCable.SetPowerState(connectionPort);
+        }
+        
+        activeCable.firstConnection.CheckForPower(activeCable);
+        activeCable.endConnection.CheckForPower(activeCable);
+        
+        activeCable.lineRenderer.Simplify(0.25f);
+        
+        allCables.Add(activeCable);
+        activeCable = null;
+        timer = 0;
+        
+        OnCableConnection?.Invoke(this, EventArgs.Empty);
+    }
+    
+    
     void PlaceCablePoint()
     {
         if (activeCable == null) return;
@@ -59,86 +168,30 @@ public class CableManager : MonoBehaviour
             var distance = Vector3.Distance(lastVector, currentPosition);
             if (distance > 0.5f)
             {
-                activeCable.positionCount++;
-                activeCable.SetPosition(activeCable.positionCount -3,cablePlacementPoint.position);
+                activeCable.lineRenderer.positionCount++;
+                activeCable.lineRenderer.SetPosition(activeCable.lineRenderer.positionCount -3,cablePlacementPoint.position);
                 lastPosition = currentPosition;
             }
             
             timer = 0;
         }
     }
-
-    public void StartNewCable()
+    public ConnectionPort PlaceBuoy()
     {
-        if (activeCable == null)
-        { 
-            lastPosition = boatAttachPoint.position;
-            GameObject startCable = Instantiate(cablePrefab, cableContainer.transform);
-            
-            activeCable = startCable.GetComponent<LineRenderer>();
-            var closetConnector = cableConnector.CheckCollision();
-            if (closetConnector != null)
-            {
-                activeCable.SetPosition(0,closetConnector.transform.position);
-                firstPoint = closetConnector;
-            }
-            else
-            {
-                activeCable.SetPosition(0,cablePlacementPoint.position);
-                PlaceBuoy(0);
-            }
-        }
-    }
-
-    public void PlaceBuoy(int i)
-    {
-        var newBuoy1 = Instantiate(buoyPrefab, cableContainer.transform);
-        newBuoy1.transform.position = cablePlacementPoint.position + new Vector3(0,0.5f,0f);
+        var newBuoy = Instantiate(buoyPrefab, cableContainer.transform);
+        newBuoy.transform.position = cablePlacementPoint.position + new Vector3(0,0.5f,0f);
         
-        switch (i)
-        {
-            //Start Cable
-            case 0:
-                firstPoint = newBuoy1;
-                break;
-            //Stop Cable
-            case 1:
-                break;
-            default:
-                return;
-        }
+        return newBuoy.GetComponent<ConnectionPort>();
         
     }
 
-    public void StopCable()
-    {
-        if (activeCable == null) return;
-        
-        var closetConnector = cableConnector.CheckCollision();
-        if (closetConnector != null && closetConnector.transform.parent.gameObject != firstPoint)
-        {
-            activeCable.SetPosition(activeCable.positionCount-1,closetConnector.transform.position);
-        }
-        else
-        {
-            activeCable.SetPosition(activeCable.positionCount-1,cablePlacementPoint.position);
-            activeCable.Simplify(0.25f);
-            PlaceBuoy(1);
-        }
-        //activeCable.BakeMesh(new Mesh());
-        //activeCable.gameObject.SetActive(false);
-        allCables.Add(activeCable);
-        activeCable = null;
-        firstPoint = null;
-        timer = 0;
-    }
-
+    
     private void FollowBoat()
     {
         if (activeCable == null) return;
         
-        activeCable.SetPosition(activeCable.positionCount-1, boatAttachPoint.position);
-        activeCable.SetPosition(activeCable.positionCount-2, cablePlacementPoint.position);
+        activeCable.lineRenderer.SetPosition(activeCable.lineRenderer.positionCount-1, boatAttachPoint.position);
+        activeCable.lineRenderer.SetPosition(activeCable.lineRenderer.positionCount-2, cablePlacementPoint.position);
         
     }
 }
