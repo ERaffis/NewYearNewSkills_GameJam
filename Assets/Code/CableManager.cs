@@ -18,6 +18,9 @@ public class CableManager : MonoBehaviour
 
     public CableConnector cableConnector;
 
+    public GameObject firstPoint;
+    public GameObject lastPoint;
+    
     public float desiredTime;
     public float timer;
     // Start is called before the first frame update
@@ -32,8 +35,8 @@ public class CableManager : MonoBehaviour
     {
         FollowBoat();
         
-        if (Input.GetKeyDown(KeyCode.Mouse0)) StartNewCable();
-        if (Input.GetKeyDown(KeyCode.Mouse1)) StopCable();
+        //if (Input.GetKeyDown(KeyCode.Mouse0)) StartNewCable();
+        //if (Input.GetKeyDown(KeyCode.Mouse1)) StopCable();
         
     }
 
@@ -56,7 +59,6 @@ public class CableManager : MonoBehaviour
             var distance = Vector3.Distance(lastVector, currentPosition);
             if (distance > 0.5f)
             {
-                Debug.Log("Should Place new point");
                 activeCable.positionCount++;
                 activeCable.SetPosition(activeCable.positionCount -3,cablePlacementPoint.position);
                 lastPosition = currentPosition;
@@ -75,23 +77,37 @@ public class CableManager : MonoBehaviour
             
             activeCable = startCable.GetComponent<LineRenderer>();
             var closetConnector = cableConnector.CheckCollision();
-            Debug.Log(closetConnector);
             if (closetConnector != null)
             {
-                activeCable.SetPosition(0,cableConnector.CheckCollision().transform.position - new Vector3(0,-0.5f,0));
+                activeCable.SetPosition(0,closetConnector.transform.position);
+                firstPoint = closetConnector;
             }
             else
             {
                 activeCable.SetPosition(0,cablePlacementPoint.position);
-                PlaceBuoy();
+                PlaceBuoy(0);
             }
         }
     }
 
-    public void PlaceBuoy()
+    public void PlaceBuoy(int i)
     {
         var newBuoy1 = Instantiate(buoyPrefab, cableContainer.transform);
         newBuoy1.transform.position = cablePlacementPoint.position + new Vector3(0,0.5f,0f);
+        
+        switch (i)
+        {
+            //Start Cable
+            case 0:
+                firstPoint = newBuoy1;
+                break;
+            //Stop Cable
+            case 1:
+                break;
+            default:
+                return;
+        }
+        
     }
 
     public void StopCable()
@@ -99,21 +115,21 @@ public class CableManager : MonoBehaviour
         if (activeCable == null) return;
         
         var closetConnector = cableConnector.CheckCollision();
-        Debug.Log(closetConnector);
-        if (closetConnector != null)
+        if (closetConnector != null && closetConnector.transform.parent.gameObject != firstPoint)
         {
-            activeCable.SetPosition(activeCable.positionCount-1,cableConnector.CheckCollision().transform.position- new Vector3(0,-0.5f,0));
+            activeCable.SetPosition(activeCable.positionCount-1,closetConnector.transform.position);
         }
         else
         {
             activeCable.SetPosition(activeCable.positionCount-1,cablePlacementPoint.position);
             activeCable.Simplify(0.25f);
-            PlaceBuoy();
+            PlaceBuoy(1);
         }
         //activeCable.BakeMesh(new Mesh());
         //activeCable.gameObject.SetActive(false);
         allCables.Add(activeCable);
         activeCable = null;
+        firstPoint = null;
         timer = 0;
     }
 

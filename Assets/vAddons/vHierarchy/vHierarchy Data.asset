@@ -15,15 +15,122 @@ MonoBehaviour:
   sceneDatasByGuid:
     keys:
     - 99c9720ab356a0642a771bea13969a05
+    - 6987c2d89c2bdbf4ca5ee2af28fce24b
+    - 7902f3080afafbf4395c9adff24c7597
+    - 
     values:
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1332844032-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1088535867-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1934315329-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1115208384-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1131944544-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-410087039-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-832575517-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1434228847-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1779501821-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-424950922-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1867927826-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-330585543-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-364141409-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-111290023-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-602908989-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-732040451-0
+        - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-989543971-0
         values:
         - iColor: 0
           icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: DirectionalLight Icon
+        - iColor: 0
+          icon: ReflectionProbe Icon
+        - iColor: 0
+          icon: ReflectionProbe Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: AudioSource Icon
       goDatasByInstanceId:
-        keys: a06f0000
+        keys: c26f00004ca0000018a800007ac1000056effeff04c20000ceedfeffb6ecfeffb8c000002ac100009ac10000e0c10000c0c00000fec1000092c00000a4c0000068c0000002c10000e2e9feff723bfcff
         values:
         - iColor: 0
           icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: DirectionalLight Icon
+        - iColor: 0
+          icon: ReflectionProbe Icon
+        - iColor: 0
+          icon: ReflectionProbe Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: AudioSource Icon
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []

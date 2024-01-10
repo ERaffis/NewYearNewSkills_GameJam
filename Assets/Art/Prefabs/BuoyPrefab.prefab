@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6273059522374849462}
   - component: {fileID: 1300451815033627935}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: CableHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1069155402727311187}
   - component: {fileID: 5592195681356015072}
   m_Layer: 0
-  m_Name: yellowLight
+  m_Name: RotatingLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,6 +166,59 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5570837913716026093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2894735784403330683}
+  - component: {fileID: 3958869681108573203}
+  m_Layer: 6
+  m_Name: CableConnectionPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2894735784403330683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5570837913716026093}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2833595861463803668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3958869681108573203
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5570837913716026093}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.16658163
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6451595666979920136
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +231,7 @@ GameObject:
   - component: {fileID: 6279337509924467207}
   - component: {fileID: 4888754268689639042}
   m_Layer: 0
-  m_Name: buoy 1
+  m_Name: MainBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,11 +311,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2833595861463803668}
-  - component: {fileID: 8778197812487981600}
   - component: {fileID: 9021966205716748099}
-  - component: {fileID: -5126255332308624395}
-  - component: {fileID: 8400980282750493605}
-  m_Layer: 6
+  - component: {fileID: 376924001365380308}
+  m_Layer: 0
   m_Name: BuoyPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,23 +338,9 @@ Transform:
   - {fileID: 2749574937336298138}
   - {fileID: 7059179671914665241}
   - {fileID: 25492552389637673}
+  - {fileID: 2894735784403330683}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -44.935}
---- !u!111 &8778197812487981600
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6668791176663358102}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &9021966205716748099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +357,7 @@ MonoBehaviour:
   size: 1
   amplitude: 1.5
   overrideWaterMaterial: {fileID: 0}
---- !u!114 &-5126255332308624395
+--- !u!114 &376924001365380308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,27 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29530cdeda9618f4aae7646b55b747ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &8400980282750493605
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6668791176663358102}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.16658163
-  m_Center: {x: 0, y: 0, z: 0.19}
 --- !u!1 &8082852700425472372
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +381,7 @@ GameObject:
   - component: {fileID: 9187001733648567956}
   - component: {fileID: 24249873203930715}
   m_Layer: 0
-  m_Name: redLigh
+  m_Name: LightTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +464,7 @@ GameObject:
   - component: {fileID: 4239759103048239671}
   - component: {fileID: 8625426264691757834}
   m_Layer: 0
-  m_Name: greenLight
+  m_Name: LightOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

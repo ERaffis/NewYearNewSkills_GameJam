@@ -13,10 +13,10 @@ public class BoatController : MonoBehaviour
     [Range(-2,2)] public int rightWheelSpeed;
     [Range(0,50f)] [Tooltip("Speed modifier, the lower the number the slower the boat")]public float speedModifier;
     [Range(0,10f)] [Tooltip("Rotation modifier, the lower the number the slower the boat")]public float rotationModifier;
-    private float _boatSpeed;
-    private float _desiredBoatSpeed;
-    private float _rotationSpeed;
-    private float _desiredRotationSpeed;
+    public float _boatSpeed;
+    public float _desiredBoatSpeed;
+    public float _rotationSpeed;
+    public float _desiredRotationSpeed;
 
     [Header("Visuals")] 
     public GameObject leftWheelModel;
@@ -166,9 +166,8 @@ public class BoatController : MonoBehaviour
         {
             _leverLinkControl.LinkLevers(true);
             
-            leftWheelSpeed = rightWheelSpeed;
 
-            if (leftWheelSpeed < 0)
+            if (rightWheelSpeed != leftWheelSpeed)
             {
                 rightWheelSpeed = 0;
                 leftWheelSpeed = 0;
@@ -200,9 +199,8 @@ public class BoatController : MonoBehaviour
         {
             _leverLinkControl.LinkLevers(true);
             
-            leftWheelSpeed = rightWheelSpeed;
 
-            if (leftWheelSpeed > 0)
+            if (rightWheelSpeed != leftWheelSpeed)
             {
                 rightWheelSpeed = 0;
                 leftWheelSpeed = 0;

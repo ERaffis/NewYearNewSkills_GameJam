@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VTabs.Libs;
 
 public class PlayerAudioManager : MonoBehaviour
 {
@@ -21,8 +22,18 @@ public class PlayerAudioManager : MonoBehaviour
 
     void Update()
     {
-        PlayAudio();
-        StopAudio();
+        /*PlayAudio();
+        StopAudio();*/
+        var desiredLeftVolume = boatController.leftWheelSpeed.Abs() * boatController._boatSpeed * 500f;
+        if (desiredLeftVolume <0.1f) desiredLeftVolume = 0;
+        
+        lwSource.volume = Mathf.Lerp(lwSource.volume, desiredLeftVolume, Time.deltaTime * 0.5f);
+        
+        var desiredRightVolume = boatController.rightWheelSpeed.Abs() * boatController._boatSpeed * 500f;
+        if (desiredRightVolume <0.1f) desiredRightVolume = 0;
+        
+        rwSource.volume = Mathf.Lerp(lwSource.volume, desiredRightVolume, Time.deltaTime * 0.5f);
+        
     }
 
     private void PlayAudio()
